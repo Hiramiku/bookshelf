@@ -15,18 +15,21 @@ class _DetailBookPageState extends State<DetailBookPage> {
   @override
   void didChangeDependencies(){
     super.didChangeDependencies();
-    final arguments = (ModalRoute.of(context)?.settings.arguments ?? <String, dynamic>{'bookname': '...', 'bookautor': '...', 'img': '...'}) as Map<String, dynamic>;
+    final arguments = (ModalRoute.of(context)?.settings.arguments ?? <String, dynamic>{'bookname': '...', 'bookautor': '...','annotation': '...', 'img': '...'}) as Map<String, dynamic>;
     assert(arguments != null && arguments is Map,'Error' );
     bookname = arguments['bookname'] as String;
     bookautor = arguments['bookautor'] as String;
-    //img = arguments['img'] as Image;
+    annotation = arguments['annotation'] as String;
+    img = arguments['img'] as Image;
 
     }
 
 
   String? bookname;
   String? bookautor;
-  var img;
+
+  String? annotation;
+  Image? img;
 
   @override
   Widget build(BuildContext context) {
@@ -70,9 +73,8 @@ class _DetailBookPageState extends State<DetailBookPage> {
               const SizedBox(
                 height: 10,
               ),
-              const Text(
-                  'sdgkdsfhnjsdgsndljkgnls knsnkdagkslda fkdsa fjkdsjkf skladf kjdskafj kalsdfjk sakdf kjsdla fjklsaj jfskdjfglskdgfkj sjklfjdlkfjkl dsjfksdkfj kldsfksdklfjdsklfjksdljf kjdkfjd  ',
-                  style: TextStyle(fontSize: 16.0),
+              Text(
+                  annotation ?? '...', style: TextStyle(fontSize: 16.0),
                   textDirection: TextDirection.ltr,),
             ],
           ),

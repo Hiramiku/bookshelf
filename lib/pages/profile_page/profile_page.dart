@@ -53,7 +53,7 @@ class ProfilePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Отзывы:', style: TextStyle(color: Colors.white)),
+                    const Text('Отзывы:', style: TextStyle(color: Colors.white)),
                     AccentButton(
                       onTap: () {},
                       title: 'Написать отзыв',

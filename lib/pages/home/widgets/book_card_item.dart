@@ -10,9 +10,10 @@ import '../detailbook_page.dart';
 
 
 class BookCardItem extends StatelessWidget {
-  const BookCardItem({super.key, required this.bookname, required this.bookautor, required this.img});
+  const BookCardItem({super.key, required this.bookname, required this.bookautor, required this.img, required this.annotation});
   final String bookname;
   final String bookautor;
+  final String annotation;
 
   final Image img;
   @override
@@ -33,7 +34,8 @@ class BookCardItem extends StatelessWidget {
                       arguments: {
                         'bookname': bookname,
                         'bookautor': bookautor,
-                      'pic': img});
+                        'annotation' : annotation,
+                      'img': img});
                       //AutoRouter.of(context).push(DetailBookRoute());
 
                     },

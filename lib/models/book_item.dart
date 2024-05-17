@@ -1,8 +1,12 @@
-class BookItem {
-  final String name;
-  final String autor;
+import 'dart:ui';
 
-  BookItem({required this.name, required this.autor});
+class BookItem {
+  final String bookname;
+  final String bookautor;
+  final String annotation;
+  final Image img;
+
+  BookItem(this.bookname, this.bookautor, this.annotation, this.img);
 
 
 }

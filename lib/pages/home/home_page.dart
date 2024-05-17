@@ -4,7 +4,7 @@ import '../../router/router.dart';
 import '../isRead_page/isRead_page.dart';
 import '../profile_page/profile_page.dart';
 import '../reading_page/reading_page.dart';
-import 'cardItemslist.dart';
+import 'cardItemspage.dart';
 import 'detailbook_page.dart';
 
 import 'package:auto_route/auto_route.dart';
