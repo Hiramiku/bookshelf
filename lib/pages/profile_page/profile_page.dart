@@ -1,12 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../design/error_dialog.dart';
 import '../../design/images.dart';
 import '../../design/widgets/accent_button.dart';
 import 'comment_card.dart';
 
 @RoutePage()
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +30,7 @@ class ProfilePage extends StatelessWidget {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text('Ник',
+                              Text('Имя пользователя',
                                   maxLines: 2, overflow: TextOverflow.ellipsis),
                               SizedBox(
                                 height: 10,
@@ -37,7 +40,7 @@ class ProfilePage extends StatelessWidget {
                                 style: TextStyle(fontSize: 20.0),
                               ),
                               Text(
-                                  'djkfdsdfsdfdsfsdfdsfdsfla fjklsaj jfskdjfglskdgfkj sjklfjdlkfjkl dsjfksdkfj kldsfksdklfjdsklfjksdljf kjdkfjd  ',
+                                  'Описание профиля.',
                                   style: TextStyle(fontSize: 16.0),
                                   maxLines: 6,
                                   overflow: TextOverflow.ellipsis,
@@ -55,7 +58,7 @@ class ProfilePage extends StatelessWidget {
                   children: [
                     const Text('Отзывы:', style: TextStyle(color: Colors.white)),
                     AccentButton(
-                      onTap: () {},
+                      onTap: () {_showErrorDialog(context);},
                       title: 'Написать отзыв',
                     ),
                   ],
@@ -72,6 +75,15 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
         ));
+  }
+  void _showErrorDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const ErrorDialog(
+            description: 'Извините, данная функция еще в разработке.');
+      },
+    );
   }
 }
 

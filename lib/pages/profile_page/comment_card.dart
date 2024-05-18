@@ -12,8 +12,8 @@ class CommentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       height: 190,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -28,27 +28,27 @@ class CommentCard extends StatelessWidget {
                 Text(namebook,
                     style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 24,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600)),
                 Text(autorbook,
                     style: const TextStyle(
                       color: Colors.black,
                       fontSize: 16,)),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 const SizedBox(
                   width: 200,
-                  child: Text(';ldfgldfg;lklfgfdklgk;ldfgldfg;lklfg',
+                  child: Text('Текст отзыва. Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва.Текст отзыва. ',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 18,),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
 
                 Row(children: <Widget>[
                   for(int i = 0; i< rating; i++)
-                    Icon(Icons.star, color: Colors.amber, size: 35),
+                    const Icon(Icons.star, color: Colors.amber, size: 35),
                 ])
               ]),
           //const SizedBox(width: 15),

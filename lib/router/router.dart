@@ -4,7 +4,7 @@ import '../pages/home/home_page.dart';
 import '../pages/profile_page/profile_page.dart';
 import '../pages/reading_page/reading_page.dart';
 import 'package:auto_route/auto_route.dart';
-
+/*
 part 'router.gr.dart';
 
 @AutoRouterConfig()
@@ -32,3 +32,4 @@ class AppRouter extends _$AppRouter {
 
   ];
 }
+*/

@@ -11,15 +11,16 @@ class BookShelfApp extends StatefulWidget {
 }
 
 class _BookShelfAppState extends State<BookShelfApp> {
-  final _router = AppRouter();
+ // final _router = AppRouter();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'BookShelf',
       theme: darkTheme,
+      debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => HomePage(),
-        '/detail': (context) => DetailBookPage(),
+        '/detail': (context) => const DetailBookPage(),
       }
       //routerConfig: _router.config(),
 

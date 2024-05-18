@@ -22,7 +22,7 @@ class BookCardItem extends StatelessWidget {
 
     return  Container(
                 padding: const EdgeInsets.symmetric( vertical: 10.0, horizontal: 8),
-                height: 280,
+                height: 270,
                 child: Card(
                   color: backlightColor,
                   shape: RoundedRectangleBorder(
@@ -49,10 +49,13 @@ class BookCardItem extends StatelessWidget {
                           children: <Widget>[
                             Center(child: Container(width: 150, child: img)),
                             SizedBox(height: 10),
-                            Text(bookname,
+                            Text(bookname, style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
                                 maxLines: 2, overflow: TextOverflow.ellipsis),
                             Text(bookautor,
-                                style: theme.textTheme.labelSmall,
+                                style: const TextStyle(color: Colors.white54, fontSize: 16),
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis),
                           ]),

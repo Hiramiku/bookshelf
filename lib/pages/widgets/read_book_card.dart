@@ -13,9 +13,9 @@ class ReadBookCard extends StatelessWidget {
           style: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
-              fontSize: 24)),
+              fontSize: 20)),
       subtitle: Text(bookautor,
-          style: const TextStyle(color: Colors.white54, fontSize: 20)),
+          style: const TextStyle(color: Colors.white54, fontSize: 16)),
       trailing: IconButton(
           onPressed: () {},
           icon: const Icon(Icons.check_circle),

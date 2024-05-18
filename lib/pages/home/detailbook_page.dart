@@ -74,7 +74,7 @@ class _DetailBookPageState extends State<DetailBookPage> {
                 height: 10,
               ),
               Text(
-                  annotation ?? '...', style: TextStyle(fontSize: 16.0),
+                  annotation ?? '...', style: const TextStyle(fontSize: 16.0),
                   textDirection: TextDirection.ltr,),
             ],
           ),

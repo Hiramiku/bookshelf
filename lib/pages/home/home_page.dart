@@ -85,7 +85,7 @@ var _selectedPageIndex = 0;
   void _openPage(int index){
       setState((){
         _selectedPageIndex = index;
-        _pageController.animateToPage(index, duration: Duration(milliseconds: 300), curve: Curves.bounceInOut);
+        _pageController.animateToPage(index, duration: const Duration(milliseconds: 300), curve: Curves.bounceInOut);
       });
   }
 

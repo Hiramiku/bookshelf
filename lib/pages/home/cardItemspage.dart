@@ -4,9 +4,22 @@ import 'package:flutter/material.dart';
 import '../../design/colors.dart';
 import '../../design/images.dart';
 import '../../repositories/book_items/book_items_repository.dart';
+import 'bloc/book_list_bloc.dart';
 @RoutePage()
-class CardItemsPage extends StatelessWidget {
-  const CardItemsPage({super.key});
+class CardItemsPage extends StatefulWidget {
+
+  @override
+  State<CardItemsPage> createState() => _CardItemsPageState();
+}
+
+class _CardItemsPageState extends State<CardItemsPage> {
+  final _bookListBloc = BookListBloc();
+
+  @override
+  void initState(){
+    super.initState();
+    //_bookListBloc.add(); //event
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +33,7 @@ class CardItemsPage extends StatelessWidget {
           floating: true,
           pinned: true,
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(70),
+            preferredSize: const Size.fromHeight(75),
             child: Container(
               margin: EdgeInsets.all(8.0),
               decoration: BoxDecoration(
@@ -40,7 +53,7 @@ class CardItemsPage extends StatelessWidget {
                   ),
                   prefixIcon: const Icon(Icons.search),
                   suffixIcon: IconButton(
-                      icon: Icon(Icons.clear),
+                      icon: const Icon(Icons.clear),
                       onPressed: _controllerSearch.clear),
                   prefixIconColor: Colors.white70,
                   suffixIconColor: Colors.white70,
@@ -52,7 +65,7 @@ class CardItemsPage extends StatelessWidget {
         const SliverToBoxAdapter(child: SizedBox(height: 8)),
     SliverGrid.count(
     crossAxisCount: 2,
-      childAspectRatio:0.48,
+      childAspectRatio:0.52,
     children: <Widget>[
             BookCardItem(
         bookname: 'Унесенные ветром',
@@ -64,7 +77,7 @@ class CardItemsPage extends StatelessWidget {
         bookname: 'Книжный вор',
         bookautor: 'Маркус Зусак',
         img: knijVor,
-        annotation: '''     Январь 1939 года. Германия. Страна, затаившая дыхание. Никогда еще у смерти не было столько работы. А будет еще больше. Мать везет девятилетнюю Лизель Мемингер и ее младшего брата к приемным родителям под Мюнхен, потому что их отца больше нет - его унесло дыханием чужого и странного слова "коммунист", и в глазах матери девочка видит страх перед такой же судьбой. В дороге смерть навещает мальчика и впервые замечает Лизель. Так девочка оказывается на Химмель-штрассе - Небесной улице. Кто бы ни придумал это название, у него имелось здоровое чувство юмора. Не то чтобы там была сущая преисподняя. Нет. Но и никак не рай. "Книжный вор" - недлинная история, в которой, среди прочего, говорится: об одной девочке; о разных словах; об аккордеонисте; о разных фанатичных немцах; о еврейском драчуне; и о множестве краж. Это книга о силе слов и способности книг вскармливать душу. Экранизирован в 2013 году.'''),
+        annotation: '''     Январь 1939 года. Германия. Страна, затаившая дыхание. Никогда еще у смерти не было столько работы. А будет еще больше. Мать везет девятилетнюю Лизель Мемингер и ее младшего брата к приемным родителям под Мюнхен, потому что их отца больше нет - его унесло дыханием чужого и странного слова "коммунист", и в глазах матери девочка видит страх перед такой же судьбой. В дороге смерть навещает мальчика и впервые замечает Лизель. Так девочка оказывается на Химмель-штрассе - Небесной улице. Кто бы ни придумал это название, у него имелось здоровое чувство юмора. Не то чтобы там была сущая преисподняя. Нет. Но и никак не рай. "Книжный вор" - недлинная история, в которой, среди прочего, говорится: об одной девочке; о разных словах; об аккордеонисте; о разных фанатичных немцах; о еврейском драчуне; и о множестве краж.'''),
       BookCardItem(
         bookname: 'Властелин Колец',
         bookautor: 'Дж. Р. Р. Толкин',

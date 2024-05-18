@@ -10,11 +10,11 @@ final darkTheme = ThemeData(
       bodyMedium: TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.w500,
-          fontSize: 24
+          fontSize: 18
       ),
       labelSmall: TextStyle(
           color: Colors.white54,
-          fontSize: 20
+          fontSize: 14
       ),
     ),
     appBarTheme: const AppBarTheme(
