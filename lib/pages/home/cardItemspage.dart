@@ -1,13 +1,10 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:book_shelf/pages/home/widgets/book_card_item.dart';
 import 'package:flutter/material.dart';
 import '../../design/colors.dart';
 import '../../design/images.dart';
-import '../../repositories/book_items/book_items_repository.dart';
 import 'bloc/book_list_bloc.dart';
-@RoutePage()
-class CardItemsPage extends StatefulWidget {
 
+class CardItemsPage extends StatefulWidget {
   @override
   State<CardItemsPage> createState() => _CardItemsPageState();
 }
@@ -35,7 +32,7 @@ class _CardItemsPageState extends State<CardItemsPage> {
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(75),
             child: Container(
-              margin: EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 color: backlightColor,
                 borderRadius: BorderRadius.circular(20),

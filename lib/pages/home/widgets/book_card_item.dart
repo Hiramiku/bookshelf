@@ -1,14 +1,5 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../design/colors.dart';
-import '../../../design/images.dart';
-import '../../../repositories/book_items/book_items_repository.dart';
-import '../../../router/router.dart';
-import '../detailbook_page.dart';
-
-
 class BookCardItem extends StatelessWidget {
   const BookCardItem({super.key, required this.bookname, required this.bookautor, required this.img, required this.annotation});
   final String bookname;
@@ -47,8 +38,8 @@ class BookCardItem extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Center(child: Container(width: 150, child: img)),
-                            SizedBox(height: 10),
+                            Center(child: SizedBox(width: 150, child: img)),
+                            const SizedBox(height: 10),
                             Text(bookname, style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
@@ -62,7 +53,6 @@ class BookCardItem extends StatelessWidget {
                     ),
                   ),
                 ),
-
 
     );
   }

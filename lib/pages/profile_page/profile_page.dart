@@ -1,15 +1,10 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-
 import '../../design/error_dialog.dart';
 import '../../design/images.dart';
 import '../../design/widgets/accent_button.dart';
 import 'comment_card.dart';
-
-@RoutePage()
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

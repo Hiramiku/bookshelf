@@ -1,8 +1,8 @@
 import 'package:book_shelf/pages/home/detailbook_page.dart';
 import 'package:book_shelf/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:book_shelf/router/router.dart';
 import 'package:book_shelf/theme/theme.dart';
+
 class BookShelfApp extends StatefulWidget {
   const BookShelfApp({super.key});
 
@@ -19,7 +19,7 @@ class _BookShelfAppState extends State<BookShelfApp> {
       theme: darkTheme,
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => const HomePage(),
         '/detail': (context) => const DetailBookPage(),
       }
       //routerConfig: _router.config(),

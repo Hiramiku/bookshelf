@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../design/error_dialog.dart';
 import '../../design/widgets/add_button.dart';
-
-import 'package:auto_route/auto_route.dart';
-
 import '../widgets/read_book_card.dart';
 
-@RoutePage()
 class ReadingPage extends StatefulWidget {
   const ReadingPage({super.key, this.isRead = false});
   final bool isRead;
@@ -67,7 +63,7 @@ class _ReadingPageState extends State<ReadingPage> {
         elevation: 5,
         context: context,
         builder: (_) => Container(
-              padding: EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 30),
               child: SingleChildScrollView(child: StatefulBuilder(
                   // Wrap with StatefulBuilder
                   builder: (BuildContext context, StateSetter setStateModal) {

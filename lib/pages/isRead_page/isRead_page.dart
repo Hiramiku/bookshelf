@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../design/error_dialog.dart';
 import '../../design/widgets/add_button.dart';
-
-import 'package:auto_route/auto_route.dart';
-
 import '../widgets/read_book_card.dart';
-
-@RoutePage()
 class isReadPage extends StatefulWidget {
   const isReadPage({super.key});
 

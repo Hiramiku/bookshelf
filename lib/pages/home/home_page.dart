@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../design/colors.dart';
-import '../../router/router.dart';
 import '../isRead_page/isRead_page.dart';
 import '../profile_page/profile_page.dart';
 import '../reading_page/reading_page.dart';
 import 'cardItemspage.dart';
-import 'detailbook_page.dart';
 
-import 'package:auto_route/auto_route.dart';
 
-@RoutePage()
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -22,9 +18,6 @@ class _HomePageState extends State<HomePage> {
 var _selectedPageIndex = 0;
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
-
           return Scaffold(
             body: PageView(
                 controller: _pageController,
@@ -33,9 +26,9 @@ var _selectedPageIndex = 0;
                 },
                 children: [
               CardItemsPage(),
-              ReadingPage(),
-              isReadPage(),
-              ProfilePage()
+              const ReadingPage(),
+              const isReadPage(),
+              const ProfilePage()
 
             ]),
             bottomNavigationBar: BottomNavigationBar(

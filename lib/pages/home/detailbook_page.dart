@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../design/images.dart';
 
-import 'package:auto_route/auto_route.dart';
-@RoutePage()
 class DetailBookPage extends StatefulWidget {
   const DetailBookPage({super.key});
 
@@ -16,14 +14,12 @@ class _DetailBookPageState extends State<DetailBookPage> {
   void didChangeDependencies(){
     super.didChangeDependencies();
     final arguments = (ModalRoute.of(context)?.settings.arguments ?? <String, dynamic>{'bookname': '...', 'bookautor': '...','annotation': '...', 'img': '...'}) as Map<String, dynamic>;
-    assert(arguments != null && arguments is Map,'Error' );
     bookname = arguments['bookname'] as String;
     bookautor = arguments['bookautor'] as String;
     annotation = arguments['annotation'] as String;
     img = arguments['img'] as Image;
 
     }
-
 
   String? bookname;
   String? bookautor;
